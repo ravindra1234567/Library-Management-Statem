@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Library Managent</title>
+		<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+		
+		<script>
+		
+			var c;
+			function get(max)	
+			{
+				c = Math.floor(Math.random() * 10000);
+				document.getElementById("text3").value = c;
+			}
+		
+		
+			function adminv()
+			{
+				ads = document.getElementById("ad");
+				aa = ads.value;
+				if(c == aa)
+				{
+			
+				}
+				else
+				{
+					ads.focus();
+					alert("Verification Code Miss Match");
+				}
+			}
+			
+			
+			
+			function confirmpsw()
+			{
+				var psw = document.getElementById("password");
+				var cpsw = document.getElementById("cpassword");
+				if(psw == cpsw )
+				{
+					alert("heello");
+				}
+				else
+				{
+					alert("Confirem Password Wrong");
+					cpsw.focus();
+				}
+			}
+			
+			
+			
+			
+			
+		
+		
+			var image1=new Image();
+			image1.src="li1.jpg";
+			var image2=new Image();
+			image2.src="li2.jpg";
+			var image3=new Image();
+			image3.src="li3.jpg";
+			var image4=new Image();
+			image4.src="li4.jpg";
+		
+		function userlogin()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "userlogin1.html";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="black";
+				a.style.color="white";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function adminlogin()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "adminlogin.html";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+
+
+		function stateChange3()
+
+		{
+	
+	
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="black";
+				a.style.color="white";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function forgotpsw1()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "forgotpsw.html";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="black";
+				a.style.color="white";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function adminforgotpsw1()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "adminforgotpsw.html";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="black";
+				a.style.color="white";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function singup1()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "usersignup.html";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="black";
+				a.style.color="white";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function slider2()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "slider2.html";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="black";
+				a.style.color="white";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+			
+		function fun()
+			{
+				a=document.getElementById("enrollment");
+				roll=a.value;
+				len=roll.length;
+				//alert(len);
+				if(len==11)
+				{
+					patt=/\d{5}\(co4|mo2|e03|e01)\d{3}/i;
+					result=roll.match(patt);
+					if(!result)
+					{
+					alert("Enter the valide Rollnumber");
+					a.focus();
+					}
+					else
+					{
+						alert("Sucessful");
+					}
+				}
+				else
+				{
+					alert("Enter Correct Roll Number");
+					a.focus();
+				}
+			}
+			
+			function fun1()
+			{
+				a=document.getElementById("email");
+				email=a.value;
+				//alert(roll);
+				//len=roll.length;
+				//alert(len);
+					patt=/^[a-z]\w*[@](gmail|outlook|yahoo)[.]com$/i;
+					result=email.match(patt);
+					if(!result)
+					{
+					alert("Enter the valid Email Id");
+					a.focus();
+					} 
+					else
+					{
+						alert("Valid Email");
+					}
+			}
+
+			
+		</script>
+		<style> 
+			
+				
+				.nav{
+					width:100%;
+					background:#000033;
+					height:60px;
+					
+					border-style:solid;
+					border-width:7px;
+					border-color:red;
+					border-top-width:0px;
+					border-left-width:0px;
+					border-right-width:0px;
+				}
+				ul{
+				list-style:none;
+				padding:0;
+				margin-left:700px;
+				position:absolute;
+			}
+			ul li a{
+					width:150px;
+					color:white;
+					display:block;
+					text-decoration:none;
+					font-size:20px;
+					text-align:center;
+					padding:0;
+					border-radius:10px;
+					font-family:century Gothic;
+					font-weight:bold;
+				}
+			li{
+				float:left;
+				margin-top:3opx;
+				}
+				a{
+					width:150px;
+					background:00;
+					color:blue;
+					text-decoration:none;
+					font-size:20px;
+					text-align:center;
+					padding:10px;
+					border-radius:10px;
+					font-family:century Gothic;
+					font-weight:bold;
+				}  
+			
+				a:hover{
+						background:#669900;
+						transition:0.6s;
+					}
+					
+					#headline{
+						background-color:rgb(112, 33, 15);
+						font-size:2em;color:rgb(226, 11, 32);
+						font-family:'Tangerine', cursive;;
+						height:30px;
+						font-size:30px;
+						color:white;
+						text-align:center;
+						transition-property:background,height,font-size,color;
+						transition-duration:3s;
+						transition-timing-function:linear 2s;
+						}
+			   #headline:hover{
+								height:80px;
+								background:yellow;
+								font-size:60px;
+								color:blue;
+							 }
+		</style> 
+	</head>
+	<body >
+		<marquee id="headline" scrollamount="10" scrolldaley="00" style="font-family:bungee inline"> GUIDED BY SATYENDRA SINGH YADAV </B></marquee>
+		<div class="nav">
+			<ul>
+				<li>  <a onclick="adminlogin()">ADMIN LOGIN</a> </li>
+				<li> <a onclick="userlogin()">USER LOGIN</a> </li>
+				<li> <a onclick="singup1()">USER SIGN UP</a> </li>
+			</ul>
+		</div>
+		<div id="d1"></div>
+		
+		<img src="li1.jpg"  width="1350" height="540" name="slide" />
+		<script>
+			var step=1;
+			function slideit()
+			{
+				document.images.slide.src = eval("image"+step+".src");
+				if(step<4)			
+				step++;
+				else		
+				step=1;
+				setTimeout("slideit()",1800);	
+			}
+			slideit();
+		</script>
+</html>

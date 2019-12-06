@@ -1,0 +1,53 @@
+<html>
+	<head>
+	<script>
+		
+	</script>
+	<style>
+		form{
+				border-style:solid;
+				width:500px;
+				height:800px;
+				border-width:2px;
+				border-color:#232451;
+				padding-top-width:50px;
+				border-left-width:2px;
+				border-right-width:2px;
+				margin-left:500px;
+			}
+			.xyz{background:#76bcb9;text-align:center;height:50px;}
+			input{
+				width:400px;
+				border-radius:7px;
+				height:35px;
+				background:#efebe8;
+				margin-left:20px;
+				}
+				textarea{
+				width:400px;
+				border-radius:7px;
+				background:#efebe8;
+				margin-left:20px;
+				}
+	</style>
+	
+	
+	
+	</head>
+	<body>
+		<span style="font-size:30px;margin-left:50px;">Admin Sign up Form</span>
+		<form action="adminsignup.jsp" method="get">
+			<div class="xyz">SIGN UP FORM</div>
+			<br><br><br>&nbsp&nbsp&nbsp Enter Full Name<br><input type="text" name="adminname"  required >
+			<br><br><br>&nbsp&nbsp&nbsp Enter Father Name<br><input type="text" name="fname" required ><br><br>
+			&nbsp&nbsp&nbsp Mobile Number<br><input type="number" name="mobile" required ><br><br><br>
+			&nbsp&nbsp&nbsp Enter Address<br><textarea rows="4"  name="address" required></textarea><br><br><br>
+			&nbsp&nbsp&nbsp Enter Email<br><input type="email" name="email" id="email" onchange="fun1()"><br><br><br>
+			&nbsp&nbsp&nbsp Password<br><input type="password" name="password" required><br><br>
+			&nbsp&nbsp&nbsp Confirem Password<br><input type="password"  name="cpassword"  " id="password" required><br><br>
+			<button  style="border-redius:10px;margin-left:20px;height:30px;width:120px;background:#22c413;" >Register</button><br><br><br><br><br>
+			
+		</form>
+	</body>
+	
+</html>

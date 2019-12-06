@@ -1,0 +1,1288 @@
+<html>
+<head>
+	<script>
+	
+	
+<!------------------------------------------------------------------------------------------------------------------------------------->
+	// Book name wise
+			/*function conf()
+			{
+				var l= 1;	
+				//alert("hello");
+				var st = "true";
+				var d = "true";
+				q = document.getElementById('oi');
+				p = q.value;
+					//alert(pp11);
+				for(l;l<=p;l++)
+				{
+					
+					auname = document.getElementById('au'+l);
+					auname1 = auname.innerHTML;
+					ss = document.getElementById('sn'+l);
+					ssn = ss.innerHTML;
+					cha = document.getElementById('cha'+l);
+					var cha1 = cha.checked;
+					//alert(auname1);
+					//alert(ssn);
+					//alert(cha1);
+					var v = "true";
+					var j = cha1;
+					 var n = v.localeCompare(j);
+					// alert(n);
+					if(n==0)
+					{
+						roll1=document.getElementById("roll");
+						roll11=roll1.value;
+						id1=ssn;
+						au1=auname1;
+						alert(id1);
+						alert(au1);
+						alert(roll11);
+					}
+					
+				}
+
+			}*/
+		
+		
+		
+			function bvalue()
+			{
+				var bvalue = document.getElementById("ddd");
+				v = bvalue.value;
+				//alert(v);
+				fun(v);
+			}
+			function fun(v)
+		{
+			g=v;
+			//alert(g);
+			
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "selectallbook.jsp?bookname="+g;
+			xmlHttp.onreadystatechange = stateChange4;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange4()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function funbook1()
+		{
+			//alert("hi");
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "booklistname.jsp";
+			xmlHttp.onreadystatechange = state;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function state()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("ddd");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+
+<!------------------------------------------------------------------------------------------------------------------------------------->
+	// Authoe wise
+	function auvalue()
+			{
+				var auvalue = document.getElementById("dd1");
+				a = auvalue.value;
+				//alert(a);
+				funau(a);
+			}
+			function funau(a)
+		{
+			gg=a;
+			//alert("hi"+gg);
+			
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "selectallauthor.jsp?authorname="+gg;
+			xmlHttp.onreadystatechange = stateChange4;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange4()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+		function authorwise()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "authorlist.jsp";
+			xmlHttp.onreadystatechange = stateChange3;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("dd1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!------------------------------------------------------------------------------------------------------------------->
+		// Book Delete
+				var ppp="";
+				var ppp1="";
+				var bookname1=" ";
+				var category1=" ";
+				var auther1=" ";
+				var ssn=" ";
+				var price1="";
+			function bookdelete()
+			{
+
+				var ll = 1;	
+				alert("hello");
+				qq11 = document.getElementById('oi');
+				pp11 = qq11.value;
+					//alert(pp11);
+				for(ll;ll<=pp11;ll++)
+				{
+					qqq = document.getElementById('ed'+ll);
+					ppp = qqq.checked;
+					qqq1 = document.getElementById('de'+ll);
+					ppp1 = qqq1.checked;
+					bookname = document.getElementById('bn'+ll);
+					bookname1 = bookname.innerHTML;
+					category = document.getElementById('cat'+ll);
+					category1 = category.innerHTML;
+					author = document.getElementById('au'+ll);
+					author1 = author.innerHTML;
+					ssn = document.getElementById('ssn'+ll);
+					ssn1 = ssn.innerHTML;
+					price = document.getElementById('pri'+ll);
+					price1 = price.innerHTML;
+					edite444();
+				}
+
+			}
+			
+		function edite444()
+		{
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "edite12345.jsp?&ssn="+ssn1+"&delete="+ppp1;
+			xmlHttp.onreadystatechange = stateChanged322;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChanged322()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!------------------------------------------------------------------------------------------------------------------->
+		// Student Delete Record
+		function fun11()
+			{
+				var ll = 1;		
+				qq11 = document.getElementById('oi');
+				pp11 = qq11.value;
+				
+				for(ll;ll<=pp11;ll++)
+				{
+					
+					qq = document.getElementById('si'+ll);
+					pp = qq.innerHTML;
+					qq1 = document.getElementById('ch'+ll);
+					pp1 = qq1.checked;
+					delete444();
+				}
+
+			}	
+			function delete444()
+		{
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "delete444.jsp?rollnumber1="+pp+"&au="+pp1;
+			xmlHttp.onreadystatechange = stateChange322;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange322()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	// Verification
+			var c;
+			function get(max)	
+			{
+				c = Math.floor(Math.random() * 10000);
+				document.getElementById("text3").value = c;
+			}
+		
+		
+			function adminv()
+			{
+				ads = document.getElementById("ad");
+				aa = ads.value;
+				if(c == aa)
+				{
+					
+				}
+				else
+				{
+					alert("Verification Code Miss Match");
+				}
+			}
+	
+	
+	// Book name wise
+	
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// Auther name wise
+		
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// book name and auther wise
+		
+		
+		function bookauther()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "booknameandautherwise123.jsp";
+			xmlHttp.onreadystatechange = stateChange3bau;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange3bau()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		function autherbook()
+		{
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+			var v = document.getElementById("bookname");
+			v1 = v.value;
+			var w = document.getElementById("auther");
+			v1 = v.value;
+			w1=w.value;
+			//alert(v1);
+			var url= "booknameandautherwise.jsp?bookname="+v1+"&auther="+w1;
+			xmlHttp.onreadystatechange = stateChange4au;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange4au()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// Addbook
+		function addbook()
+		{
+			//alert("hello");
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "addbook.html";
+			xmlHttp.onreadystatechange = stateChange31;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange31()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		<!------------------------------------------------------------------------------------------------------------------->
+		// bookissue
+		function bookissue()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}	
+			var url= "bookissue.html";
+			xmlHttp.onreadystatechange = stateChange32;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange32()
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// Bookissued
+		function bookissued()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "bookissued.jsp";
+			xmlHttp.onreadystatechange = stateChange33;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange33()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		//Booklist
+		function booklist()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "booklist.jsp";
+			xmlHttp.onreadystatechange = stateChange34;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange34()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		//User registretion
+		function registereduser()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "registereduser.jsp";
+			xmlHttp.onreadystatechange = stateChange35;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange35()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		//book return
+		function bookreturn()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "bookreturn.html";
+			xmlHttp.onreadystatechange = stateChange36;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange36()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!----------------------------------------------------------------------------------------------------------------------->
+	//Addmin bookretirn
+		function adminbookreturn1()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "adminbookreturn1.jsp";
+			xmlHttp.onreadystatechange = stateChange37;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange37()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// Addmin booknot return
+		function adminbooknotreturn()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "adminbooknotreturn.jsp";
+			xmlHttp.onreadystatechange = stateChange38;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange38()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// Book Manage
+		function bookmanage()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "bookmanage.jsp";
+			xmlHttp.onreadystatechange = stateChange39;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange39()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// user sinup
+		function signup1()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "usersignup.html";
+			xmlHttp.onreadystatechange = stateChange310;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange310()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!--------------------------------------------------------------------------------------------------------------------->
+		// Book issue list
+		function issuebooklist()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "issuebooklist.jsp";
+			xmlHttp.onreadystatechange = stateChange314;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange314()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+    <!------------------------------------------------------------------------------------------------------------------------>
+		// Book not issue book list
+		function notissuebooklist()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "notissuebooklist.jsp";
+			xmlHttp.onreadystatechange = stateChange315;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange315()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+<!---------------------------------------------------------------------------------------------------------------------------->
+		// Admin signup
+		function adminsignup()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "adminsignup.html";
+			xmlHttp.onreadystatechange = stateChange316;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange316()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!------------------------------------------------------------------------------------------------------------------------>
+		// Admin change password
+		function adminchangepsw()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+	
+	
+	
+			var url= "adminchangepsw.html";
+			xmlHttp.onreadystatechange = stateChange17;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChange17()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	<!----------------------------------------------------------------------------------------------------------------------->
+		// Email 
+		function fun1()
+			{
+				a=document.getElementById("email");
+				email=a.value;
+					patt=/^[a-z]\w*[@](gmail|outlook|yahoo)[.]com$/i;
+					result=email.match(patt);
+					if(!result)
+					{
+					alert("Enter the valid Email Id");
+					a.focus();
+					} 
+					else
+					{
+						alert("Valid Email Id");
+					}
+			}
+
+	
+		<!------------------------------------------------------------------------------------------------------------------>
+		// Change page
+		
+		function pagechange()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "pagechange.jsp";
+			xmlHttp.onreadystatechange = stateChangede3c;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChangede3c()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+		
+	
+	
+	
+	
+	</script>
+	<style> 
+			body{
+					margin:0;
+					background:#f2f2f2f2;
+				}
+			.nav{
+					width:100%;
+					background:#000033;
+					height:80px;
+					border-style:solid;
+					border-width:7px;
+					border-color:red;
+					border-top-width:0px;
+					border-left-width:0px;
+					border-right-width:0px;
+					position:fixed;
+					margin-top:0px;
+				}
+				ul{
+				list-style:none;
+				padding:0;
+				position:absolute;
+			}
+			ul li{
+					float:left;
+					margin-top:10px;
+				}
+			ul li a{
+					width:150px;
+					color:white;
+					display:block;
+					text-decoration:none;
+					font-size:20px;
+					text-align:center;
+					padding:0;
+					border-radius:10px;
+					font-family:century Gothic;
+					font-weight:bold;
+				}
+				ul li ul{
+							background:#000033;
+						}
+				ul li ul li{ float:none;}
+				ul li ul{display:none;}
+				ul li:hover ul{display:block;border-radius:5px;width:150px;}
+				a:hover{
+						background:#669900;
+					}
+					button{
+							margin-top:40px;
+							margin-left:80px;
+							width:150px;
+							height:150px;
+
+							font-size:20px;
+							border-radius:10px;
+							}
+		</style> 
+	</head>
+	<body>
+			<!--<a style="margin-left:1100px;background:red;margin-top:10px;font-size:50px;" href="logout1.jsp">LOGOUT</a>-->
+			
+		<div class="nav">
+			<ul>
+				<li> <a>DASHBOARD</a> </li>
+				<li> <a onclick="adminsignup()">REGISTER ADMIN</a> </li>
+				<li> <a>BOOKES</a>
+					<ul>
+						<li><a onclick="addbook()">Add Book</a></li>
+						
+					</ul>
+				</li>
+				<li> <a >ISSUE BOOKES</a> 
+					<ul>
+						<li><a onclick="bookissue()">Issue New Book</a></li>
+						<li><a onclick="bookreturn()">Book Return </a></li>
+					</ul>
+				</li>
+				
+				<li> <a onclick="adminchangepsw();">CHANGE PASSWORD</a> </li>
+				<li> <a onclick=" ">SEARCH BOOKS</a>
+					<ul>
+						<li><a onclick="funbook1();">Book Name Wise</a></li>
+						<li><a onclick="authorwise();">Auther Name Wise</a></li>
+					</ul>
+				</li>
+				<li> <a style="background-color:red;height:50px;text-align:center;font-size:35px;margin-left:50px;" href="logout1.jsp">LOGOUT</a></li>
+			</ul>
+		</div>
+				<span style="font-size:30px;margin-left:50px;">Admin Dashboard</span>
+				<button style="margin-top:100px;" onclick="booklist()">BOOKS LISTED</button>	
+				<button style="margin-top:50px;"onclick="issuebooklist();" >ISSUE BOOKS LIST</button>
+				<button style="margin-top:50px;" onclick="notissuebooklist();">Not ISSUE BOOKS List</button>
+				<button style="margin-top:50px;" onclick="bookissued()">Student Issued BOOKS LISTE</button>
+				<button style="margin-left:325px;" onclick="adminbooknotreturn()">BOOKS Not Returned</button>
+				<button style="" onclick="registereduser()">Registered User</button>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button style="margin-top:40px;margin-left:0px;" onclick="adminbookreturn1()">BOOKS Returned</button><br><br>
+				<!--<button style="margin-top:40px;margin-left:80px;background:#111111;color:white;">List Categories</button><br><br>-->
+				<center><select id="ddd"  style="width:150px;"  onchange=" bvalue();" placeholder="Book name"></select><br><br>
+				<select id="dd1"  style="width:150px;"  onchange="auvalue();" placeholder="Author name"></select><br><br></center>
+				<!-- <input type="submit" onclick=" bvalue();"></center>-->
+				<div id="d1" ></div>
+	</body>
+</html>

@@ -1,0 +1,3 @@
+<%
+	responce.sendRedirect("admindasboard.html");
+%>

@@ -1,0 +1,78 @@
+<html>
+	<head>
+	<script>
+		function pagechange()
+		{
+			
+			if (typeof XMLHttpRequest != "undefined")
+			{
+				xmlHttp= new XMLHttpRequest();
+			
+			}
+
+			else if (window.ActiveXObject)
+			{
+				xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		
+			}
+	
+			if (xmlHttp==null)
+			{
+				alert ("Browser does not support XMLHTTP Request")
+				return
+			}
+			var url= "pagechange.jsp";
+			xmlHttp.onreadystatechange = stateChangede3c;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send(null);
+		}	
+		function stateChangede3c()
+
+		{
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+			{
+		
+				a=document.getElementById("d1");
+				a.style.background="white";
+				a.style.color="black";
+				a.innerHTML=xmlHttp.responseText;
+		
+			}
+		}
+	</script>
+	<style>
+		form{
+				border-style:solid;
+				width:500px;
+				height:600px;
+				border-width:2px;
+				border-color:#232451;
+				padding-top-width:50px;
+				border-left-width:2px;
+				border-right-width:2px;
+				margin-left:500px;
+			}
+			.xyz{background:#76bcb9;text-align:center;height:50px;}
+			input{
+				width:400px;
+				border-radius:7px;
+				height:35px;
+				background:#efebe8;
+				margin-left:20px;
+				}
+	</style>
+	</head>
+	<body>
+		<span style="font-size:30px;margin-left:50px;">Book Information</span>
+		<form action="addbook.jsp" method="post">
+			<div class="xyz">Book INFO</div>
+			<br><br><br>&nbsp&nbsp&nbsp Book Name<br><input type="text" name="bookname" onclick="get(9);"><br><br><br>
+			&nbsp&nbsp&nbsp Category<br><input type="text" name="category"><br><br><br>
+			&nbsp&nbsp&nbsp Auther Name<br><input type="text" name="auther"><br><br><br>
+			&nbsp&nbsp&nbsp SSN Number<br><input type="text" name="ssn"><br><br>
+			&nbsp&nbsp&nbsp Price<br><input type="number" name="price">
+			<br><center><button style="border-redius:10px;margin-left:20px;height:50px;width:100px;background:#22c413;" onclick="pagechange();">ADD</button></center>
+		</form>
+		<div id="d1"></div>
+	</body>
+</html>

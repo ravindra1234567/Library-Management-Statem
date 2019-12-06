@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<Script>
+
+		</script>
+	<style>
+		form{
+				border-style:solid;
+				width:500px;
+				height:500px;
+				border-width:2px;
+				border-color:#232451;
+				padding-top-width:50px;
+				border-left-width:2px;
+				border-right-width:2px;
+				margin-left:500px;
+			}
+			.xyz{background:#76bcb9;text-align:center;height:50px;}
+			input{
+				width:400px;
+				border-radius:7px;
+				height:35px;
+				background:#efebe8;
+				margin-left:20px;
+				}
+	</style>
+	</head>
+	<body>
+		<span style="font-size:30px;margin-left:50px;">Admin Login Form</span>
+		<form action="adminlogin.jsp" method="get">
+		<div class="xyz">LOGIN FORM</div>
+		<br><br><br>&nbsp&nbsp&nbsp Enter Name<br><input type="text" name="userid" onclick="get(9);"><br><br><br>
+			&nbsp&nbsp&nbsp Password<br><input type="password" name="password"><br><br>
+			&nbsp&nbsp&nbsp <a onclick="adminforgotpsw1()">Forgot Password</a><br><br>
+			&nbsp&nbsp&nbsp Verification Code<input style="width:90px;font-size:30px;font-family:Conclusion;"type="text" name="verfi" id="ad" onchange="adminv();" >   <input style="width:90px;font-size:30px;font-family:Conclusion;"type="display"id="text3"><br><br><br>
+			<button style="border-redius:10px;margin-left:20px;height:30px;width:80px;background:#22c413;" >Login</button>
+		</form>
+	</body>
+</html>
